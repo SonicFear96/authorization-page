@@ -29,7 +29,6 @@ import { useHistory } from "react-router-dom";
 
 export const SignInPage = () => {
   let history = useHistory();
-  // const classes = useStyles();
   const [authData, setAuthData] = useState({ username: "", password: "" });
 
   const handleChange = (e) => {
@@ -45,12 +44,14 @@ export const SignInPage = () => {
       },
       body: JSON.stringify(authData),
     })
-      .then((res) => {
-        if (res.ok) history.push("/profile");
-        res.json();
-      })
-      .then((res) => {
-        console.log(res);
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.token) {
+          localStorage.setItem("token", data.token);
+          history.push("/profile");
+        } else {
+          alert("неверные логин и пароль");
+        }
       });
   };
 
