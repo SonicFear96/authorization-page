@@ -81,7 +81,7 @@ export const ProfilePage = () => {
 
   return (
     <>
-      <div>
+      <div className="container-table">
         <Paper>
           <TableContainer style={{ marginTop: 100 }}>
             <Table
