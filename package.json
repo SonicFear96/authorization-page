@@ -2,7 +2,7 @@
   "name": "authorization-page",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://sonicfear96.github.io",
+  "homepage": "https://sonicfear96.github.io/",
   "dependencies": {
     "@material-ui/core": "^4.12.3",
     "@testing-library/jest-dom": "^5.11.4",
@@ -17,7 +17,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -b master -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
