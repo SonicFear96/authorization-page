@@ -16,7 +16,7 @@ export const SignInPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch("http://emphasoft-test-assignment.herokuapp.com/api-token-auth/", {
+    fetch("https://emphasoft-test-assignment.herokuapp.com/api-token-auth/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

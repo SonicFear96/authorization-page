@@ -15,7 +15,7 @@ export const ProfilePage = () => {
   useEffect(() => {
     const token = localStorage.getItem("token");
     console.log(token);
-    fetch("http://emphasoft-test-assignment.herokuapp.com/api/v1/users/", {
+    fetch("https://emphasoft-test-assignment.herokuapp.com/api/v1/users/", {
       method: "GET",
       headers: {
         Authorization: `Token ${token}`,
